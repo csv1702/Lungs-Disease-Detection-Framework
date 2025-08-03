@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | MediScan AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color:rgb(73, 141, 209);
+      color: #2d3748;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a202c;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #4a5568;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #3182ce;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .heading h1 {
+      font-size: 34px;
+      color: #2d3748;
+      margin-bottom: 10px;
+    }
+
+    .heading p {
+      font-size: 18px;
+      color:rgb(252, 253, 253);
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 320px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: #2c5282;
+    }
+
+    .card p, .card ul {
+      font-size: 16px;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+
+    .card ul {
+      padding-left: 18px;
+    }
+
+    .card ul li {
+      margin-bottom: 12px;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #1a202c;
+    }
+
+    .disclaimer {
+      margin-top: 30px;
+      background-color: #ebf8ff;
+      border-left: 4px solid #3182ce;
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #2b6cb0;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MediScan AI</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about" class="active">About</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="heading" data-aos="fade-down">
+    <h1>About Our Disease Detection Technology</h1>
+    <p>Learn how our deep learning model works to detect diseases from medical images.</p>
+  </div>
+
+  <div class="content">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <h2>Our Technology</h2>
+      <p>
+        MediScan AI leverages deep learning neural networks to analyze chest X-rays and other medical images. The model is trained on thousands of curated images to identify disease indicators such as COVID-19, Pneumonia, and Tuberculosis.
+      </p>
+      <p>
+        At the core is a Convolutional Neural Network (CNN), capable of learning to identify subtle visual features associated with medical conditions, delivering accurate predictions from complex image data.
+      </p>
+
+      <h2>How It Works</h2>
+      <ul>
+        <li><span class="highlight">1. Image Preprocessing:</span> Uploaded images are resized and normalized to match training conditions.</li>
+        <li><span class="highlight">2. Feature Extraction:</span> The CNN detects visual patterns that may correlate with disease.</li>
+        <li><span class="highlight">3. Classification:</span> Based on extracted features, the system identifies the most likely diagnosis.</li>
+        <li><span class="highlight">4. Result Generation:</span> A clear prediction and confidence score is returned to the user.</li>
+      </ul>
+
+      <div class="disclaimer" data-aos="fade-in" data-aos-delay="300">
+        <strong>Accuracy & Limitations:</strong><br>
+        This tool is intended as a diagnostic aid for healthcare professionals and should not replace medical judgment. Always consult a physician for diagnosis and treatment.
+      </div>
+    </div>
+
+    <div class="card" data-aos="fade-left" data-aos-delay="200">
+      <h2>Our Approach</h2>
+      <ul>
+        <li><strong>🧠 Deep Learning:</strong> Advanced CNNs for pattern recognition and disease detection.</li>
+        <li><strong>🩺 Medical Expertise:</strong> Model insights guided by real-world clinical knowledge.</li>
+        <li><strong>📚 Research Backed:</strong> Developed using publicly available datasets and peer-reviewed methodologies.</li>
+        <li><strong>❤️ Patient-Centered:</strong> Built to assist clinicians and improve patient outcomes.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+</body>
+</html>

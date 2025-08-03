@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MediScan AI - Disease Detection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #14b8a6, #3b82f6);
+      min-height: 100vh;
+    }
+    .backdrop {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+  
+      .upload-btn:hover {
+        transform: scale(1.03);
+        transition: all 0.3s ease-in-out;
+      }
+  </style>
+</head>
+<body class="text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md py-4">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <svg class="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 12h4l3 8 4-16 3 8h4"></path>
+        </svg>
+        <span class="text-2xl font-bold text-gray-900">MediScan AI</span>
+      </div>
+      <nav class="space-x-6 text-lg">
+        <a href="#" class="text-teal-600 font-semibold hover:underline">Home</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600">Disease Detection</a>
+        <a href="{{ url_for('about') }}">About</a>
+
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Left: About Text -->
+    <div class="text-white">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        Advanced Disease <br />Detection with AI
+      </h1>
+      <p class="text-lg mb-6">
+        Our deep learning model can detect lungs diseases from medical images with high accuracy,
+        providing fast and reliable diagnostic assistance.
+      </p>
+      <a href="#predict" class="inline-flex items-center bg-white text-teal-700 font-semibold px-5 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+        Try Disease Detection →
+      </a>
+    </div>
+
+    <!-- Right: Prediction Upload -->
+    <div class="backdrop max-w-xl w-full">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-4">🩺 Chest X-ray Disease Detection</h1>
+        <p class="text-center text-gray-600 mb-6">Upload a chest X-ray image to predict possible disease conditions.</p>
+    
+        <form method="POST" enctype="multipart/form-data" class="flex flex-col gap-4">
+          <input type="file" name="file" accept="image/*" required class="p-2 border rounded bg-white shadow-sm">
+          <button type="submit" class="upload-btn bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-700 shadow-md">
+            🔍 Predict
+          </button>
+        </form>
+    
+        {% if prediction %}
+          <div class="mt-6 p-4 bg-green-100 border-l-4 border-green-500 rounded">
+            <h2 class="text-xl font-semibold text-green-700">Prediction: {{ prediction }}</h2>
+            <p class="text-gray-700">Confidence: {{ confidence }}</p>
+          </div>
+        {% endif %}
+      </div>
+
+  </section>
+  <!-- Disclaimer Section -->
+<section class="max-w-5xl mx-auto px-6 py-8">
+    <div class="bg-blue-50 border border-blue-200 text-blue-800 rounded-xl p-6 flex items-start space-x-4">
+      <svg class="w-6 h-6 mt-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+      </svg>
+      <div>
+        <h3 class="font-bold text-lg mb-1">Important Disclaimer</h3>
+        <p class="text-base">
+          This tool is designed to assist in disease detection, not to replace professional medical diagnosis. Always consult with a qualified
+          healthcare provider regarding health concerns and before making any medical decisions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+
+</body>
+</html>

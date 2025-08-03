@@ -1,0 +1,10 @@
+              precision    recall  f1-score   support
+
+       Covid       0.92      0.92      0.92      3603
+      Normal       0.86      0.90      0.88      3620
+   Pneumonia       0.94      0.92      0.93      3638
+Tuberculosis       0.95      0.94      0.94      3601
+
+    accuracy                           0.92     14462
+   macro avg       0.92      0.92      0.92     14462
+weighted avg       0.92      0.92      0.92     14462
