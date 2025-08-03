@@ -1,11 +1,14 @@
 # Website Interface
-![alt text](<Screenshot 2025-06-23 001849.png>)
+<img width="3199" height="1661" alt="Screenshot 2025-06-23 001849" src="https://github.com/user-attachments/assets/1ed1fa0b-2fe5-4b4e-8c49-c1cb0039a6e0" />
+
 
 # Detecting Disease
-![alt text](<Screenshot 2025-06-23 001921.png>)
+<img width="3195" height="1662" alt="Screenshot 2025-06-23 001921" src="https://github.com/user-attachments/assets/d95fe6fb-81d4-41ad-a07e-709bdd3d43e1" />
+
 
 # About Page
-![alt text](<Screenshot 2025-06-23 001943.png>)
+<img width="3197" height="1674" alt="Screenshot 2025-06-23 001943" src="https://github.com/user-attachments/assets/b46981f1-0c08-4ef9-9124-bdd4f79f8772" />
+
 
 # 🩺Lungs Disease Detection Framework
 
