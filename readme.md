@@ -14,7 +14,7 @@
 
 A deep learning-based framework to detect Lungs diseases from chest X-ray images using Convolutional Neural Networks (CNN).
 
-# Before Running , download and store dataset in raw folder 
+# Before Running , download and store dataset in raw folder & create data, model and required folder according to project structure 
 
 
 # 🩺Lungs Disease Detection Framework
